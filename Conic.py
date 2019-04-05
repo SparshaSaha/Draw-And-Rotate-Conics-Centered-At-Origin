@@ -19,7 +19,7 @@ class Conic(object):
     # The Canvas will be of variable length depending on a and b
     # Thus we create a dynamic canvas which changes depending on a and b values to account for the rotation of the conic
     def createCanvas(self):
-        self.canvas = [[self.white for i in range(0, 3*self.b+1)]for j in range(0, 3*self.a+1)]
+        self.canvas = [[self.white for i in range(0, 3 * self.b + 1)]for j in range(0, 3 * self.a + 1)]
 
     # We assume that origin is at (0,0) as this makes it easier to rotate the conic
     # But our canvas is a 2D array(which is later converted to a numpy array and then converted to an image)
