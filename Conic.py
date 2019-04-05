@@ -6,15 +6,15 @@ import matplotlib.pyplot as plt
 
 class Conic(object):
 
-    def __init__(self, a, b, angle, equateMethod):
+    def __init__(self, a, b, angle):
         self.a = a
         self.b = b
         self.canvas = None
         self.white = 255
         self.black = 0
-        self.equate = equateMethod
         self.angle = angle
-
+        
+    
     # Method that creates the Canvas
     # The Canvas will be of variable length depending on a and b
     # Thus we create a dynamic canvas which changes depending on a and b values to account for the rotation of the conic
