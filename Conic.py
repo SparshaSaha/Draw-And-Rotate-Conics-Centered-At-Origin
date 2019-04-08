@@ -38,6 +38,8 @@ class Conic(object):
     # Out plotting would ideally be one pixel thick right now
     # But that makes things look bad
     # Thus we are filling the nearby pixels with this method to make the conic look better
+    # Alternatively we can use opening as well to close the gap but that would be of more complexity
+    # This algorithm here is BigO(constant) complexity
     def plotNearbyRegions(self, x, y):
         if self.withinCanvasBoundaries(x-1, y):
             self.canvas[x-1][y] = self.black
