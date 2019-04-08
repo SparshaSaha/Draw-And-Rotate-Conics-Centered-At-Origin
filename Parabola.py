@@ -21,6 +21,7 @@ class Parabola(Conic):
     def drawParabola(self):
         self.plotCanvas()
 
+print("Enter 'a' and 'angle' one by one")
 a = int(input())
 angle = float(input())
 
