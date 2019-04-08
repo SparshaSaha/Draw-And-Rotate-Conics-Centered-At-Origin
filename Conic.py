@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 
 class Conic(object):
 
-    def __init__(self, a, b, angle):
-        self.a = a
-        self.b = b
+    def __init__(self, row, col, angle):
+        self.row = row
+        self.col = col
         self.canvas = None
         self.white = 255
         self.black = 0
@@ -19,21 +19,20 @@ class Conic(object):
     # The Canvas will be of variable length depending on a and b
     # Thus we create a dynamic canvas which changes depending on a and b values to account for the rotation of the conic
     def createCanvas(self):
-        self.canvas = [[self.white for i in range(0, 3 * self.b + 1)]for j in range(0, 3 * self.a + 1)]
+        self.canvas = [[self.white for i in range(0, self.col + 1)]for j in range(0, self.row + 1)]
 
     # We assume that origin is at (0,0) as this makes it easier to rotate the conic
     # But our canvas is a 2D array(which is later converted to a numpy array and then converted to an image)
     # Thus according to array Indexing we have our origin at (-a,b) which is nothing but (0,0) in Array indexing method
     # So an origin shifting is necessary at the time of plotting. This is exactly what has been done in this method
     def findShiftedCoordinatesWithAxisAsArrayIndexing(self, x, y):
-        shiftedXCoord = x + 1.5 * self.a
-        shiftedYCoord = y + 1.5 * self.b
+        shiftedXCoord = x + self.row/2
+        shiftedYCoord = y + self.col/2
         return (shiftedXCoord, shiftedYCoord)
 
     def plotCanvas(self):
         self.createCanvas()
-        # Create a linspace of XCoords
-        XCoords = np.arange(-1*self.a, self.a, 0.0005).tolist()
+        XCoords = self.createXCoords()
 
         for coord in XCoords:
             yCoordVal = self.equate(coord)
