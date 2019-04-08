@@ -65,9 +65,16 @@ class Conic(object):
         if self.withinCanvasBoundaries(x+1, y):
             self.canvas[x+1][y-1] = self.black
         
+    def plotAxes(self):
+        for i in range(0, self.row):
+            self.canvas[i][int(self.col/2)] = self.black
+
+        for j in range(0, self.col):
+            self.canvas[int(self.row/2)][j] = self.black
         
     def plotCanvas(self):
         self.createCanvas()
+        self.plotAxes()
         XCoords = self.createXCoords()
 
         for coord in XCoords:
