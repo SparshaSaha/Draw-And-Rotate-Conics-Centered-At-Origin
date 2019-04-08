@@ -28,8 +28,13 @@ class Conic(object):
     def findShiftedCoordinatesWithAxisAsArrayIndexing(self, x, y):
         shiftedXCoord = x + self.row/2
         shiftedYCoord = y + self.col/2
-        return (shiftedXCoord, shiftedYCoord)
+        return (shiftedXCoord, shiftedYCoord, self.withinCanvasBoundaries(shiftedXCoord, shiftedYCoord))
 
+    def withinCanvasBoundaries(self, x, y):
+        if x < self.row and y < self.col:
+            return True
+        return False
+        
     def plotCanvas(self):
         self.createCanvas()
         XCoords = self.createXCoords()
@@ -48,9 +53,11 @@ class Conic(object):
             shiftedCoord1 = self.findShiftedCoordinatesWithAxisAsArrayIndexing(roX1, roY1)
             shiftedCoord2 = self.findShiftedCoordinatesWithAxisAsArrayIndexing(roX2, roY2)
 
-            # Plotting on canvas
-            self.canvas[int(shiftedCoord1[0])][int(shiftedCoord1[1])] = self.black
-            self.canvas[int(shiftedCoord2[0])][int(shiftedCoord2[1])] = self.black
+            # Plotting on canvas if rotated points are within Canvas boundaries
+            if shiftedCoord1[2]:
+                self.canvas[int(shiftedCoord1[0])][int(shiftedCoord1[1])] = self.black
+            if shiftedCoord2[2]:
+                self.canvas[int(shiftedCoord2[0])][int(shiftedCoord2[1])] = self.black
 
         # Converting to numpy array and showing it as Image
         plt.imshow(np.array(self.canvas), cmap="gray")
