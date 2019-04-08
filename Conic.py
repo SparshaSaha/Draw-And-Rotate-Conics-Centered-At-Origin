@@ -34,7 +34,10 @@ class Conic(object):
         if x < self.row and y < self.col and x >= 0 and y >= 0:
             return True
         return False
-
+    
+    # Out plotting would ideally be one pixel thick right now
+    # But that makes things look bad
+    # Thus we are filling the nearby pixels with this method to make the conic look better
     def plotNearbyRegions(self, x, y):
         if self.withinCanvasBoundaries(x-1, y):
             self.canvas[x-1][y] = self.black
