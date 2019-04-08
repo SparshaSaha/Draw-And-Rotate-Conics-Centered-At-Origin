@@ -31,9 +31,35 @@ class Conic(object):
         return (shiftedXCoord, shiftedYCoord, self.withinCanvasBoundaries(shiftedXCoord, shiftedYCoord))
 
     def withinCanvasBoundaries(self, x, y):
-        if x < self.row and y < self.col:
+        if x < self.row and y < self.col and x >= 0 and y >= 0:
             return True
         return False
+
+    def plotNearbyRegions(self, x, y):
+        if self.withinCanvasBoundaries(x-1, y):
+            self.canvas[x-1][y] = self.black
+            
+        if self.withinCanvasBoundaries(x-1, y-1):
+            self.canvas[x-1][y-1] = self.black
+            
+        if self.withinCanvasBoundaries(x, y-1):
+            self.canvas[x][y-1] = self.black
+
+        if self.withinCanvasBoundaries(x+1, y):
+            self.canvas[x+1][y] = self.black
+
+        if self.withinCanvasBoundaries(x+1, y+1):
+            self.canvas[x+1][y+1] = self.black
+
+        if self.withinCanvasBoundaries(x, y+1):
+            self.canvas[x][y+1] = self.black
+
+        if self.withinCanvasBoundaries(x-1, y+1):
+            self.canvas[x-1][y+1] = self.black
+
+        if self.withinCanvasBoundaries(x+1, y):
+            self.canvas[x+1][y-1] = self.black
+        
         
     def plotCanvas(self):
         self.createCanvas()
@@ -41,6 +67,8 @@ class Conic(object):
 
         for coord in XCoords:
             yCoordVal = self.equate(coord)
+            if yCoordVal == None:
+                continue
 
             # Rotating particular point by given angle
             roX1 = coord*math.sin(math.radians(self.angle)) - yCoordVal*math.cos(math.radians(self.angle))
@@ -56,8 +84,10 @@ class Conic(object):
             # Plotting on canvas if rotated points are within Canvas boundaries
             if shiftedCoord1[2]:
                 self.canvas[int(shiftedCoord1[0])][int(shiftedCoord1[1])] = self.black
+                self.plotNearbyRegions(int(shiftedCoord1[0]), int(shiftedCoord1[1]))
             if shiftedCoord2[2]:
                 self.canvas[int(shiftedCoord2[0])][int(shiftedCoord2[1])] = self.black
+                self.plotNearbyRegions(int(shiftedCoord2[0]), int(shiftedCoord2[1]))
 
         # Converting to numpy array and showing it as Image
         plt.imshow(np.array(self.canvas), cmap="gray")

@@ -12,8 +12,9 @@ class Ellipse(Conic):
 
     def equate(self, x):
         root = (self.b**2*(1-((x)**2/self.a**2)))
-        y = math.sqrt(root)
-        return y
+        if root >= 0:
+            return math.sqrt(root)
+        return None
 
     def drawEllipse(self):
         self.plotCanvas()
