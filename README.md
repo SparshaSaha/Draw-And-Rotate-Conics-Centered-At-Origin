@@ -10,4 +10,4 @@ So we decided to work on some solution together. Well we came up with more than 
 Just to put things in perspective, the main requirement was to plot an ellipse without using any kind of plotting libraries and 
 rotate the ellipse as well given any angle.
 
-**Constraints : The Ellipse will be centered at origin **
+**Constraints : The Ellipse will be centered at origin**
