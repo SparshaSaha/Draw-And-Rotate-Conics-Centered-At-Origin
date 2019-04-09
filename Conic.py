@@ -2,7 +2,7 @@
 # Till now we cannot plot HyperBola as it is an infinite figure but it is going to be a WIP.
 import math
 import numpy as np
-import matplotlib.pyplot as plt
+import cv2
 
 class Conic(object):
 
@@ -13,6 +13,8 @@ class Conic(object):
         self.white = 255
         self.black = 0
         self.angle = angle
+        self.reqHeight = 1000
+        self.reqWidth = 800
         
     
     # Method that creates the Canvas
@@ -102,6 +104,20 @@ class Conic(object):
                 self.canvas[int(shiftedCoord2[0])][int(shiftedCoord2[1])] = self.black
                 self.plotNearbyRegions(int(shiftedCoord2[0]), int(shiftedCoord2[1]))
 
-        # Converting to numpy array and showing it as Image
-        plt.imshow(np.array(self.canvas), cmap="gray")
-        plt.show()
+        self.resizeAndPlotImage(self.canvas)
+        
+    def resizeAndPlotImage(self, image):
+        cv2.imwrite('plot.png', np.array(image))
+        image = cv2.imread('plot.png')
+        image = cv2.resize(image, (900, 900))
+        image = cv2.copyMakeBorder(
+                 image, 
+                 10, 
+                 10, 
+                 10, 
+                 10, 
+                 cv2.BORDER_CONSTANT, 
+                 value=(0,0,0)
+              )
+        cv2.imshow('plot', image)
+        
