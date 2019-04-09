@@ -4,6 +4,7 @@ import numpy as np
 
 class Parabola(Conic):
     def __init__(self, a, angle):
+        a = self.bringToScale(a)
         super().__init__(12*a, 12*a, angle)
         self.a = a
 
@@ -20,6 +21,14 @@ class Parabola(Conic):
 
     def drawParabola(self):
         self.plotCanvas()
+
+    def bringToScale(self, a):
+        if a < 10:
+            return a*10
+        else:
+            while a > 100:
+                a = int(a/10)
+            return a
 
 print("Enter 'a' and 'angle' one by one")
 a = int(input())
