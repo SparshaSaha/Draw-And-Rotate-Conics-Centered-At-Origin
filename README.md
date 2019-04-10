@@ -11,3 +11,8 @@ Just to put things in perspective, the main requirement was to plot an ellipse w
 rotate the ellipse as well given any angle.
 
 **Constraints : The Ellipse will be centered at origin**
+
+## Requirements and Installation
+### Libraries
+* OpenCv-Python
+* Numpy
