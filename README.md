@@ -18,7 +18,7 @@ rotate the ellipse as well given any angle.
 * Numpy
 
 ## Installation
-* Install pip3 by downloading this[!https://bootstrap.pypa.io/get-pip.py] file and running it on your machine using python3
+* Install pip3 by downloading this![https://bootstrap.pypa.io/get-pip.py] file and running it on your machine using python3
 
 After installing pip3 install the following using these commands:
 * `pip3 install opencv-python`
