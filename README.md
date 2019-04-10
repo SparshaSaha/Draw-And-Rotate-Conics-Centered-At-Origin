@@ -26,4 +26,5 @@ After installing pip3, install the following using these commands:
 
 ### Cloning the repository
 Use the following command to clone the repository into your local syatem:
+
 `git clone https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin.git`
