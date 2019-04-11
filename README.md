@@ -50,4 +50,4 @@ Ideally our conic(as seen in case of the circle), will have the centre as the ce
 where **a** is length of canvas and **b** is the breadth of the canvas.
 
 Lets look at this picture to have a better understanding.
-
+![picture alt](https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin/blob/master/Images/CanvasIndexing.png)
