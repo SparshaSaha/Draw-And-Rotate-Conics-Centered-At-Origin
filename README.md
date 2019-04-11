@@ -25,6 +25,6 @@ After installing pip3, install the following using these commands:
 * `pip3 install numpy`
 
 ### Cloning the repository
-Use the following command to clone the repository into your local syatem:
+Use the following command to clone the repository into your local system:
 
 `git clone https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin.git`
