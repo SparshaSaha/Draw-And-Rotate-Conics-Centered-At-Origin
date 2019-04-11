@@ -24,6 +24,7 @@ class Parabola(Conic):
 
     def bringToScale(self, a):
         if a < 10:
+            self.scale = 10
             return a*10
         else:
             while a > 100:
