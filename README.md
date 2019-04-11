@@ -51,3 +51,14 @@ where **a** is length of canvas and **b** is the breadth of the canvas.
 
 Lets look at this picture to have a better understanding.
 ![picture alt](https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin/blob/master/Images/CanvasIndexing.png)
+
+Thus it is evident we need to shift the orign at the time of plotting the figure.
+
+## Creating X coordinates
+We will create **X** coordinates in a range for which **Y** coordinates will be Real(Not Imaginary :stuck_out_tongue:)
+
+**For Example** :- 
+* In case of Ellipse with axes as **a** and **b** we need to create **X** coordinates in range **(-a,a)**.
+* In case of parabola with focus at **(a,0)** we need to generate **X** coordinates in range **(0, Infinity or Edge of canvas)**
+
+Next we need to calculate the **Y** values for those **X** coordinates and origin shift them to Array-Indexing based origin and then plot them as canvas[originShiftedX][originShiftedY] = **Black Colour**
