@@ -62,3 +62,27 @@ We will create **X** coordinates in a range for which **Y** coordinates will be 
 * In case of parabola with focus at **(a,0)** we need to generate **X** coordinates in range **(0, Infinity or Edge of canvas)**
 
 Next we need to calculate the **Y** values for those **X** coordinates and origin shift them to Array-Indexing based origin and then plot them as canvas[originShiftedX][originShiftedY] = **Black Colour**
+
+## Rotation Of Figure
+Now coming to the most interesting part that is rotation. Now we chose to use Mathematical (0,0) as origin because it is easier to rotate a figure centered at origin.
+
+**It's east to understand that for a figure centered at origin, If we can rotate all the Y coordinates by the required angle, the figure gets rotated as well**.
+
+This is the approach that we have used.
+
+For rotating each **X** and **Y** coordinates, we have used the following.
+
+`X' = X*cos(angle) - Y*sin(angle)`
+
+`Y' = X*sin(angle) + Y*cos(angle)`
+
+Thus rotating each pair of coordinates and plotting them on the canvas gives us the rotated figure.
+
+## About the Repository
+The repo contains a Base Class **Conic** which contains all the necessary functions like Plotting, Canvas creation etc. common to all conics. The comes inherited classes like Ellipse, Parabola and Hyperbola which contain funtionalities different to each figure.
+
+To test the repo, simply run either **Ellipse.py, Parabola.py, Hyperbola.py** and follow the steps. In no time you can see your plotted Conic.
+
+Thanks for reading.
+
+Oh! The Crush that I was talking about, we are going on a date Next Week! Coding can do Wonders! TING! :wink:
