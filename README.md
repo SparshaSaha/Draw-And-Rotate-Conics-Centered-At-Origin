@@ -33,3 +33,7 @@ Use the following command to clone the repository into your local system:
 The idea is to plot a Conic and be able to rotate it without using any library. Now we need to understand how we can exactly plot a figure. We know that any image can be represented as a numpy array. This concept is the base for our plot. We create a **2D numpy array** of **variable length**(reason will be discussed later) and plot the points there. By plotting we mean we fill a plot pixel with **0(stands for black in colour coding)**.
 
 The basic idea is to create a linspace of **X** values and calculate the corresponding **Y** values and plot the **Y** values on the canvas(nothing but the numpy array).
+
+Ideally this is what our canvas really is:
+
+![picture alt](https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin/blob/master/Images/CanvasEmpty.png)
