@@ -1,11 +1,11 @@
 # Conics
 ## Introduction
-Recently I came across a very interesting problem. One of my friends(read **Crush** :P) was given an assignment in her graphics class which required them to plot an ellipse without using any mathematical plotting libraries.
+Recently I came across a very interesting problem. One of my friends(read **Crush** :stuck_out_tongue:) was given an assignment in her graphics class which required them to plot an ellipse without using any mathematical plotting libraries.
 The problem seems easy at first but probably it is not. Since you cannot use any library, it is not an easy job to plot **Mr. Ellipse**.
 And to make problems worse, turns out they needed to **rotate the Ellipse as well, given some angle of rotation**.
 
-But it's my Crush nevertheless and no guy in the world would leave a chance to impress his crush I guess. Would you? I guess not. :P
-So we decided to work on some solution together. Well we came up with more than one(She is a pretty smart one. Nice catch eh? :P) and then we chose the best one(according to her) among them.
+But it's my Crush nevertheless and no guy in the world would leave a chance to impress his crush I guess. Would you? I guess not. :stuck_out_tongue:
+So we decided to work on some solution together. Well we came up with more than one(She is a pretty smart one. Nice catch eh? :wink:) and then we chose the best one(according to her) among them.
 
 Just to put things in perspective, the main requirement was to plot an ellipse without using any kind of plotting libraries and 
 rotate the ellipse as well given any angle.
@@ -43,3 +43,4 @@ Now we need to somehow fill the required pixels with black in order to give shap
 Now very roughly this is how a circle will look like(It looks really bad. But just for reference)
 
 ![picture alt](https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin/blob/master/Images/CanvasCircle.png)
+
