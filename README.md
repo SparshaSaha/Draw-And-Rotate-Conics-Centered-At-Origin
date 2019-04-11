@@ -37,3 +37,9 @@ The basic idea is to create a linspace of **X** values and calculate the corresp
 Ideally this is what our canvas really is:
 
 ![picture alt](https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin/blob/master/Images/CanvasEmpty.png)
+The rectangle represents our canvas and each smaller square inside the rectangle represents **one pixel**.
+Now we need to somehow fill the required pixels with black in order to give shape to our Conic.
+
+Now very roughly this is how a circle will look like(It looks really bad. But just for reference)
+
+![picture alt](https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin/blob/master/Images/CanvasCircle.png)
