@@ -85,4 +85,15 @@ To test the repo, simply run either **Ellipse.py, Parabola.py, Hyperbola.py** an
 
 Thanks for reading.
 
+**DEMO TIME**
+
+Rotated Ellipse:
+![picture alt](https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin/blob/master/Images/RotatedEllipse.png)
+
+Rotated Parabola:
+![picture alt](https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin/blob/master/Images/RotatedParabola.png)
+
+Rotated Hyperbola:
+![picture alt](https://github.com/SparshaSaha/Draw-And-Rotate-Conics-Centered-At-Origin/blob/master/Images/RotatedHyperbola.png)
+
 Oh! The Crush that I was talking about, we are going on a date Next Week! Coding can do Wonders! TING! :wink:
