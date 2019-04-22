@@ -1,4 +1,5 @@
 # Conics
+
 ## Introduction
 Recently I came across a very interesting problem. One of my friends(read **Crush** :stuck_out_tongue:) was given an assignment in her graphics class which required them to plot an ellipse without using any mathematical plotting libraries.
 The problem seems easy at first but probably it is not. Since you cannot use any library, it is not an easy job to plot **Mr. Ellipse**.
